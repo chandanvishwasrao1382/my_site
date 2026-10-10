@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chandan Vishwasrao | Senior Business Analyst</title>
+<meta name="description" content="Chandan Vishwasrao, Senior Business Analyst specialising in BFSI lending, LOS, LMS, Collections, AI-driven business solutions and QA leadership.">
+<style>
+:root{
+  --black:#000;
+  --white:#fff;
+  --mist:#a7a9ac;
+  --steel:#5b5e63;
+  --hair:rgba(255,255,255,.18);
+  --atmo:#4f8fff;
+  --font:"D-DIN","DIN Alternate","DIN Next","Barlow","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--black)}
+body{margin:0;background:var(--black);color:var(--white);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--white);outline-offset:4px}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s}
+.nav.solid{background:rgba(0,0,0,.88);backdrop-filter:blur(10px)}
+.nav-in{max-width:1400px;margin:0 auto;height:76px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.mark{font-size:15px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;white-space:nowrap}
+.menu{display:flex;gap:34px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.menu a{opacity:.85}.menu a:hover{opacity:1}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-block;border:2px solid var(--white);padding:15px 34px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:background .2s,color .2s}
+.btn:hover{background:var(--white);color:var(--black)}
+.btn.fill{background:var(--white);color:var(--black)}
+.btn.fill:hover{background:transparent;color:var(--white)}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+#sky{position:absolute;inset:0;width:100%;height:100%}
+.earth{position:absolute;left:50%;bottom:-190vw;width:240vw;height:240vw;transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(circle at 50% 2%,#1b3a6b 0%,#0a1830 8%,#03070f 22%,#000 40%);
+  box-shadow:0 -2px 18px rgba(120,170,255,.55),0 -18px 90px rgba(79,143,255,.35),0 -60px 220px rgba(79,143,255,.18)}
+.hero-copy{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 40px 14vh}
+.hero h1{font-size:clamp(44px,7.4vw,112px);line-height:.95;font-weight:700;letter-spacing:.02em;text-transform:uppercase;margin:0 0 26px;max-width:13ch}
+.hero p{font-size:clamp(17px,1.6vw,21px);color:#d6d7d9;max-width:52ch;margin:0 0 36px}
+.role-line{font-size:14px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin:0 0 22px;color:var(--white)}
+
+/* ---------- SPEC BAND ---------- */
+.band{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.band-in{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.spec{padding:44px 40px;border-left:1px solid var(--hair)}
+.spec:first-child{border-left:0}
+.spec b{display:block;font-size:clamp(44px,5vw,72px);line-height:1;font-weight:700;letter-spacing:-.01em}
+.spec span{display:block;margin-top:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
+
+/* ---------- SECTIONS ---------- */
+.wrap{max-width:1400px;margin:0 auto;padding:150px 40px}
+.split{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+h2{font-size:clamp(36px,4.6vw,68px);line-height:1;font-weight:700;letter-spacing:.02em;text-transform:uppercase;margin:0 0 28px}
+.body{font-size:19px;color:#cfd0d2;max-width:60ch;margin:0}
+.body + .body{margin-top:18px}
+
+/* about pillars */
+.pillars{display:grid;gap:0;border-top:1px solid var(--hair)}
+.pillar{padding:30px 0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:240px 1fr;gap:30px}
+.pillar h3{margin:0;font-size:16px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.pillar p{margin:0;color:var(--mist);font-size:17px}
+
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hair);margin-top:60px}
+.cap{padding:34px 34px 34px 0;border-bottom:1px solid var(--hair)}
+.cap h3{margin:0 0 16px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);font-weight:700}
+.cap ul{list-style:none;margin:0;padding:0}
+.cap li{font-size:20px;padding:5px 0}
+
+/* experience */
+.exp{position:relative;background:radial-gradient(ellipse at 80% 0%,rgba(79,143,255,.10),transparent 55%)}
+.log{margin-top:70px;border-left:1px solid var(--hair);margin-left:6px}
+.entry{position:relative;padding:0 0 70px 50px}
+.entry:last-child{padding-bottom:0}
+.entry::before{content:"";position:absolute;left:-6px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--black);border:2px solid var(--white)}
+.entry.now::before{background:var(--white);box-shadow:0 0 0 6px rgba(255,255,255,.12),0 0 24px rgba(120,170,255,.8)}
+.when{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-bottom:10px}
+.entry h3{margin:0;font-size:clamp(24px,2.6vw,36px);text-transform:uppercase;letter-spacing:.03em;line-height:1.1}
+.entry .r{margin:6px 0 18px;font-size:17px;color:#d6d7d9}
+.entry ul{margin:0;padding:0;list-style:none;max-width:70ch}
+.entry li{color:var(--mist);font-size:17px;padding:6px 0 6px 22px;position:relative}
+.entry li::before{content:"";position:absolute;left:0;top:17px;width:10px;height:1px;background:var(--steel)}
+
+/* recognition */
+.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--hair);margin-top:60px}
+.award{padding:46px 36px;border-left:1px solid var(--hair)}
+.award:first-child{border-left:0}
+.award .yr{font-size:56px;font-weight:700;line-height:1}
+.award h3{margin:22px 0 6px;font-size:17px;letter-spacing:.12em;text-transform:uppercase}
+.award p{margin:0;color:var(--mist)}
+
+/* toolkit spec sheet */
+.sheet{margin-top:60px;border-top:1px solid var(--hair)}
+.row{display:grid;grid-template-columns:280px 1fr;gap:30px;padding:24px 0;border-bottom:1px solid var(--hair)}
+.row dt{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);font-weight:700;padding-top:3px}
+.row dd{margin:0;font-size:19px}
+
+/* contact */
+.contact{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;border-top:1px solid var(--hair)}
+.contact .earth{bottom:auto;top:62%;}
+.contact-in{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:120px 40px;text-align:center}
+.contact h2{margin:0 auto 24px;max-width:14ch;font-size:clamp(40px,6vw,92px)}
+.contact p{color:#d6d7d9;font-size:20px;max-width:46ch;margin:0 auto 40px}
+.contact .btn-row{justify-content:center}
+
+footer{border-top:1px solid var(--hair);padding-bottom:env(safe-area-inset-bottom,0px)}
+.foot{max-width:1400px;margin:0 auto;padding:28px 40px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:980px){
+  .menu{display:none}
+  .split{grid-template-columns:1fr;gap:40px}
+  .caps,.awards{grid-template-columns:1fr}
+  .award{border-left:0;border-top:1px solid var(--hair)}.award:first-child{border-top:0}
+  .band-in{grid-template-columns:repeat(2,1fr)}
+  .spec:nth-child(3){border-left:0}
+  .spec:nth-child(n+3){border-top:1px solid var(--hair)}
+}
+@media (max-width:640px){
+  .nav-in,.hero-copy,.wrap,.contact-in,.foot{padding-left:22px;padding-right:22px}
+  .nav-in{height:64px}.mark{font-size:13px;letter-spacing:.24em}
+  .nav .btn{display:none}
+  .wrap{padding-top:100px;padding-bottom:100px}
+  .spec{padding:30px 22px}
+  .pillar,.row{grid-template-columns:1fr;gap:8px}
+  .entry{padding-left:30px}
+  .btn{padding:14px 24px}
+  .earth{bottom:-205vw;width:260vw;height:260vw}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="nav-in">
+    <a class="mark" href="#top">Chandan Vishwasrao</a>
+    <div class="menu">
+      <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#experience">Experience</a><a href="#recognition">Recognition</a><a href="#toolkit">Toolkit</a>
+    </div>
+    <a class="btn" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="earth" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <p class="role-line">Senior Business Analyst, BFSI lending</p>
+    <h1>Complex lending, made simple</h1>
+    <p>I bridge business, product and technology to design better lending journeys across LOS, LMS, Collections and AI-driven business solutions.</p>
+    <div class="btn-row">
+      <a class="btn fill" href="#contact">Let's connect</a>
+      <a class="btn" href="#experience">View experience</a>
+    </div>
+  </div>
+</header>
+
+<section class="band" aria-label="Highlights">
+  <div class="band-in">
+    <div class="spec"><b>15+</b><span>Years in BFSI</span></div>
+    <div class="spec"><b>12+</b><span>QA engineers led</span></div>
+    <div class="spec"><b>35%</b><span>Less defect leakage</span></div>
+    <div class="spec"><b>0</b><span>Sev-1 defects at go-live</span></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap split">
+    <div>
+      <h2>About</h2>
+      <p class="body">Results-driven Business Analyst and QA Manager with more than 15 years of progressive BFSI experience, specialising in lending platforms and digital transformation.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><h3>Business and technology</h3><p>Bridging business stakeholders and technology teams through clear requirements, process design and practical product thinking.</p></div>
+      <div class="pillar"><h3>Lending expertise</h3><p>End-to-end experience across LOS, LMS and Collections for MSME, Micro, Prime, Plant &amp; Machinery and Co-Lending portfolios.</p></div>
+      <div class="pillar"><h3>Quality leadership</h3><p>Hands-on QA leadership across strategy, UAT, regression, integration, API testing and metrics-driven quality governance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities" style="border-top:1px solid var(--hair)">
+  <div class="wrap">
+    <h2>Capabilities</h2>
+    <p class="body">Discovery, requirements, solution design, delivery and quality, from the first stakeholder conversation to a clean go-live.</p>
+    <div class="caps">
+      <div class="cap"><h3>Discovery and design</h3><ul><li>AI-driven business solutions</li><li>Product roadmaps</li><li>AS-IS / TO-BE mapping</li><li>Wireframes and mockups</li></ul></div>
+      <div class="cap"><h3>Requirements</h3><ul><li>BRD, FRD and SRS</li><li>User stories</li><li>Acceptance criteria</li><li>Gap and impact analysis</li></ul></div>
+      <div class="cap"><h3>Delivery and quality</h3><ul><li>Agile and Scrum</li><li>UAT facilitation</li><li>API and regression testing</li><li>Stakeholder management</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="exp" id="experience" style="border-top:1px solid var(--hair)">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="body">Fifteen years across lending, banking, capital markets and digital transformation.</p>
+    <div class="log">
+      <article class="entry now">
+        <div class="when">July 2025 to present</div>
+        <h3>UGRO Capital Pvt. Ltd.</h3>
+        <p class="r">Senior Business Analyst</p>
+        <ul>
+          <li>Driving end-to-end BA activities for LOS, LMS and Collections.</li>
+          <li>Collaborating with business stakeholders on the product roadmap.</li>
+          <li>Delivery Excellence Award 2025 for on-time, defect-free release delivery.</li>
+        </ul>
+      </article>
+      <article class="entry">
+        <div class="when">Dec 2021 to July 2025</div>
+        <h3>QK Technologies Pvt. Ltd.</h3>
+        <p class="r">Business Analyst, client: UGRO Capital</p>
+        <ul>
+          <li>Managed a QA team of 12+ engineers across multiple Agile sprints.</li>
+          <li>Authored test strategies and reduced defect leakage by 35%.</li>
+          <li>Facilitated UAT with zero Severity-1 production defects at go-live.</li>
+        </ul>
+      </article>
+      <article class="entry">
+        <div class="when">Nov 2021 to Dec 2021</div>
+        <h3>Azentio Software Pvt. Ltd.</h3>
+        <p class="r">Business Analyst, client: Central Bank of Ghana</p>
+        <ul><li>Gathered and documented requirements for a personal lending product launch.</li></ul>
+      </article>
+      <article class="entry">
+        <div class="when">2010 to 2021</div>
+        <h3>QK Technologies Pvt. Ltd.</h3>
+        <p class="r">Test Engineer to Test Lead and Assistant Test Manager</p>
+        <ul>
+          <li>Worked across UGRO Capital, Yes Bank, NSDL/CRA, NDML/NSR and CDSL projects.</li>
+          <li>Led testing and delivery across lending, NPS and securities platforms.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="recognition" style="border-top:1px solid var(--hair)">
+  <div class="wrap">
+    <h2>Recognition</h2>
+    <p class="body">Recognised for delivery excellence, teamwork and continuous improvement.</p>
+    <div class="awards">
+      <div class="award"><div class="yr">2025</div><h3>Delivery Excellence Award</h3><p>UGRO Capital</p></div>
+      <div class="award"><div class="yr">2023</div><h3>Team Stellar Award</h3><p>QK Technologies</p></div>
+      <div class="award"><div class="yr">2022</div><h3>Infant Spotlight Award</h3><p>QK Technologies</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="toolkit" style="border-top:1px solid var(--hair)">
+  <div class="wrap">
+    <h2>Specifications</h2>
+    <dl class="sheet">
+      <div class="row"><dt>Methodologies</dt><dd>Agile, Scrum, Waterfall</dd></div>
+      <div class="row"><dt>Tools</dt><dd>JIRA, HP ALM, MS Excel, MS Word, PowerPoint, MS Project</dd></div>
+      <div class="row"><dt>Testing</dt><dd>Functional, regression, integration, system, API, UAT, smoke, sanity, Selenium</dd></div>
+      <div class="row"><dt>Domains</dt><dd>MSME, Micro, Prime, Plant &amp; Machinery, Co-Lending, NPS, securities</dd></div>
+      <div class="row"><dt>Education</dt><dd>B.E. Electrical Engineering, Mumbai University</dd></div>
+      <div class="row"><dt>Certification</dt><dd>ISTQB</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="earth" aria-hidden="true"></div>
+  <div class="contact-in">
+    <h2>Let's build something better</h2>
+    <p>Open to conversations around business analysis, product, lending transformation and AI-led solutions.</p>
+    <div class="btn-row">
+      <a class="btn fill" href="mailto:Chandan.vishwasrao@gmail.com">Email me</a>
+      <a class="btn" href="tel:+918452098813">Call me</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <span>© 2026 Chandan Vishwasrao</span>
+    <span>Mumbai, India</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* nav turns solid after scrolling past the top */
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('solid',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* starfield with a passing satellite train */
+  var c=document.getElementById('sky'),x=c.getContext('2d');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,stars=[],train=null,lastTrain=-9000,dpr=Math.min(window.devicePixelRatio||1,2);
+
+  function size(){
+    W=c.clientWidth;H=c.clientHeight;
+    c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+    var n=Math.round(W*H/2600);stars=[];
+    for(var i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H*.9,r:Math.random()*1.1+.2,a:Math.random()*.7+.2,t:Math.random()*6.28,s:Math.random()*.02+.004});
+  }
+  function newTrain(){
+    var n=24+Math.floor(Math.random()*10);
+    train={x:-120,y:H*(.12+Math.random()*.2),dx:W/1100,dy:.05+Math.random()*.08,n:n,gap:13};
+  }
+  function frame(now){
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<stars.length;i++){
+      var s=stars[i];s.t+=s.s;
+      x.globalAlpha=s.a*(.65+.35*Math.sin(s.t));
+      x.fillStyle='#fff';x.beginPath();x.arc(s.x,s.y,s.r,0,6.283);x.fill();
+    }
+    if(!reduce){
+      if(!train&&now-lastTrain>6000)newTrain();
+      if(train){
+        train.x+=train.dx*2.2;train.y+=train.dy;
+        for(var k=0;k<train.n;k++){
+          var px=train.x-k*train.gap,py=train.y-k*train.gap*train.dy/(train.dx*2.2);
+          x.globalAlpha=.9-k/train.n*.6;x.fillStyle='#fff';
+          x.beginPath();x.arc(px,py,1.4,0,6.283);x.fill();
+        }
+        if(train.x-train.n*train.gap>W+40){train=null;lastTrain=now}
+      }
+      requestAnimationFrame(frame);
+    }
+    x.globalAlpha=1;
+  }
+  size();window.addEventListener('resize',size);
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
