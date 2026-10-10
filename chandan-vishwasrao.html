@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chandan Vishwasrao — Sr. Business Analyst</title>
+<meta name="description" content="Chandan Vishwasrao, Sr. Business Analyst at UGRO Capital. 15+ years in finance, lending and capital-market software quality.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#000000;
+    --graphite:#141518;
+    --steel:#2a2c31;
+    --silver:#a7a9ac;
+    --platinum:#e6e7e8;
+    --white:#ffffff;
+    --blue:#4a7fb5;
+    --font:"Jost","Futura","Century Gothic","Helvetica Neue",Arial,sans-serif;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));background:var(--black)}
+  body{font-family:var(--font);background:var(--black);color:var(--platinum);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:1px solid var(--blue);outline-offset:4px}
+
+  /* Navigation */
+  nav{position:fixed;top:0;left:0;right:0;z-index:10;padding:calc(20px + env(safe-area-inset-top,0px)) 6vw 20px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(0,0,0,.85),rgba(0,0,0,0));transition:background .4s}
+  nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--steel)}
+  .mark{width:40px;height:40px;border:1px solid var(--silver);display:grid;place-items:center;font-weight:300;letter-spacing:.12em;font-size:.8rem;color:var(--white)}
+  nav ul{list-style:none;display:flex;gap:2.4rem}
+  nav ul a{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--silver);transition:color .3s}
+  nav ul a:hover{color:var(--white)}
+
+  /* Hero */
+  .hero{position:relative;height:100vh;height:100svh;min-height:560px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 6vw 12vh;overflow:hidden;background:radial-gradient(120% 70% at 70% 110%,#1a2433 0%,var(--black) 60%)}
+  .floor{position:absolute;left:0;right:0;bottom:0;height:45%;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(167,169,172,.06) 119px 120px);mask-image:linear-gradient(to top,#000,transparent);-webkit-mask-image:linear-gradient(to top,#000,transparent);transform:perspective(600px) rotateX(60deg);transform-origin:bottom}
+  .sweep{position:absolute;top:0;bottom:0;width:40%;left:-40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.07) 45%,rgba(255,255,255,.14) 50%,rgba(255,255,255,.07) 55%,transparent);animation:sweep 2.6s cubic-bezier(.6,0,.2,1) .3s forwards;pointer-events:none}
+  @keyframes sweep{to{left:110%}}
+  .hero h1{font-weight:200;font-size:clamp(3rem,11vw,9.5rem);line-height:.92;letter-spacing:-.01em;color:var(--white);opacity:0;animation:reveal 1.6s ease 1.4s forwards}
+  .hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px var(--silver)}
+  .hero .role{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:1rem 3rem;align-items:center;opacity:0;animation:reveal 1.2s ease 2.2s forwards}
+  .hero .role p{font-size:.85rem;letter-spacing:.32em;text-transform:uppercase;color:var(--silver)}
+  .hero .role i{display:block;width:60px;height:1px;background:var(--blue)}
+  @keyframes reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .scroll{position:absolute;right:6vw;bottom:12vh;writing-mode:vertical-rl;font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;color:var(--silver)}
+
+  /* Sections */
+  section{padding:16vh 6vw}
+  .head{display:grid;grid-template-columns:minmax(160px,1fr) 3fr;gap:3rem;margin-bottom:4.5rem;align-items:baseline}
+  .head h2{font-size:.78rem;font-weight:400;letter-spacing:.4em;text-transform:uppercase;color:var(--silver)}
+  .head p.lead{font-size:clamp(1.6rem,3.4vw,2.8rem);font-weight:200;line-height:1.25;color:var(--white);max-width:22em}
+
+  /* Spec sheet */
+  .specs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--steel);border-bottom:1px solid var(--steel)}
+  .spec{padding:2.6rem 2rem 2.4rem 0;border-right:1px solid var(--steel)}
+  .spec + .spec{padding-left:2rem}
+  .spec:last-child{border-right:0}
+  .spec b{display:block;font-weight:200;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1;color:var(--white)}
+  .spec b sup{font-size:.4em;color:var(--blue);margin-left:.15em;vertical-align:top}
+  .spec span{display:block;margin-top:1rem;font-size:.9rem;color:var(--silver);max-width:16em}
+
+  .about-body{display:grid;grid-template-columns:minmax(160px,1fr) 3fr;gap:3rem;margin-top:4.5rem}
+  .about-body p{max-width:38em;font-size:1.08rem;color:var(--platinum)}
+  .about-body p + p{margin-top:1.2rem}
+  .clients{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+  .clients li{list-style:none;border:1px solid var(--steel);padding:.5rem 1.1rem;font-size:.85rem;letter-spacing:.08em;color:var(--silver)}
+
+  /* Journey */
+  #journey{background:var(--graphite)}
+  .timeline{border-left:1px solid var(--steel);margin-left:calc(25% + .75rem)}
+  .stop{position:relative;padding:0 0 4.5rem 3rem}
+  .stop:last-child{padding-bottom:0}
+  .stop::before{content:"";position:absolute;left:-5px;top:.55rem;width:9px;height:9px;border:1px solid var(--silver);background:var(--graphite);transform:rotate(45deg)}
+  .stop.now::before{background:var(--blue);border-color:var(--blue)}
+  .stop time{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:var(--silver)}
+  .stop h3{font-weight:300;font-size:clamp(1.5rem,2.6vw,2.2rem);color:var(--white);margin:.5rem 0 .2rem}
+  .stop .org{font-size:1rem;color:var(--platinum)}
+  .stop .meta{font-size:.9rem;color:var(--silver);margin-top:.3rem}
+
+  /* Expertise */
+  .expertise{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--steel);border:1px solid var(--steel)}
+  .exp{background:var(--black);padding:2.6rem 2.2rem 2.8rem;transition:background .4s}
+  .exp:hover{background:var(--graphite)}
+  .exp h3{font-weight:300;font-size:1.45rem;color:var(--white);margin-bottom:.8rem}
+  .exp p{font-size:.95rem;color:var(--silver);max-width:26em}
+
+  /* Contact */
+  #contact{text-align:left;border-top:1px solid var(--steel);padding-bottom:10vh}
+  .contact-line{display:block;font-weight:200;font-size:clamp(1.8rem,6vw,5rem);color:var(--white);line-height:1.1;word-break:break-word;transition:color .3s}
+  .contact-line:hover{color:var(--blue)}
+  .actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:3rem}
+  .btn{display:inline-block;padding:1rem 2.4rem;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;border:1px solid var(--silver);color:var(--white);transition:background .3s,color .3s,border-color .3s}
+  .btn:hover{background:var(--white);color:var(--black);border-color:var(--white)}
+  .btn.primary{background:var(--white);color:var(--black);border-color:var(--white)}
+  .btn.primary:hover{background:transparent;color:var(--white)}
+  footer{padding:2.4rem 6vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.8rem;color:var(--silver);border-top:1px solid var(--steel)}
+
+  /* Responsive */
+  @media (max-width:900px){
+    nav ul{gap:1.4rem}
+    .head,.about-body{grid-template-columns:1fr;gap:1.2rem}
+    .specs{grid-template-columns:repeat(2,1fr)}
+    .spec,.spec + .spec{padding:2rem 1.2rem 2rem 0}
+    .spec:nth-child(2n){border-right:0;padding-left:1.2rem}
+    .spec:nth-child(n+3){border-top:1px solid var(--steel)}
+    .spec:nth-child(3){padding-left:0}
+    .timeline{margin-left:0}
+    .expertise{grid-template-columns:1fr}
+    .scroll{display:none}
+  }
+  @media (max-width:560px){
+    nav ul li:nth-child(n+3){display:none}
+    nav ul a{letter-spacing:.2em}
+    .stop{padding-left:2rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .hero h1,.hero .role{opacity:1}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav" aria-label="Main">
+  <a href="#top" class="mark" aria-label="Back to top">CV</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="floor" aria-hidden="true"></div>
+  <div class="sweep" aria-hidden="true"></div>
+  <h1>Chandan<span>Vishwasrao</span></h1>
+  <div class="role">
+    <p>Sr. Business Analyst</p>
+    <i aria-hidden="true"></i>
+    <p>UGRO Capital</p>
+    <i aria-hidden="true"></i>
+    <p>Mumbai</p>
+  </div>
+  <div class="scroll" aria-hidden="true">Scroll</div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="head">
+      <h2>About</h2>
+      <p class="lead">Fifteen years making finance and lending software work the way it should — first as a quality leader, now as a business analyst.</p>
+    </div>
+
+    <div class="specs">
+      <div class="spec"><b>15<sup>+</sup></b><span>Years in the software industry</span></div>
+      <div class="spec"><b>500<sup>+</sup></b><span>Freelance projects delivered</span></div>
+      <div class="spec"><b>3</b><span>Domains: finance, loans and capital markets</span></div>
+      <div class="spec"><b>2</b><span>Disciplines: business analysis and QA management</span></div>
+    </div>
+
+    <div class="about-body">
+      <div></div>
+      <div>
+        <p>I'm a Senior Business Analyst at UGRO Capital in Mumbai, bringing a tester's eye for detail to how lending products are specified and built. Before that I spent over fifteen years at QualityKiosk Technologies, rising to Assistant Test Manager on finance and capital-market programmes.</p>
+        <p>Alongside my full-time work I freelance, and have contributed to more than 500 projects, including work on products from Google, Acquia and Spotify.</p>
+        <ul class="clients" aria-label="Freelance product work">
+          <li>Google</li><li>Acquia</li><li>Spotify</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="head">
+      <h2>Journey</h2>
+      <p class="lead">From electrical engineering to the systems behind business lending.</p>
+    </div>
+    <div class="timeline">
+      <article class="stop now">
+        <time>July 2025 — Present</time>
+        <h3>Sr. Business Analyst</h3>
+        <p class="org">UGRO Capital</p>
+        <p class="meta">Mumbai, Maharashtra</p>
+      </article>
+      <article class="stop">
+        <time>June 2010 — April 2026</time>
+        <h3>Assistant Test Manager</h3>
+        <p class="org">QualityKiosk Technologies Pvt. Ltd.</p>
+        <p class="meta">15 years 11 months</p>
+      </article>
+      <article class="stop">
+        <time>2001 — 2009</time>
+        <h3>Bachelor's degree, Electrical Engineering</h3>
+        <p class="org">University of Mumbai</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <div class="head">
+      <h2>Expertise</h2>
+      <p class="lead">Where engineering discipline meets the customer's experience.</p>
+    </div>
+    <div class="expertise">
+      <div class="exp">
+        <h3>Customer experience</h3>
+        <p>Shaping products around the people who use them, from first requirement to final release.</p>
+      </div>
+      <div class="exp">
+        <h3>Quality &amp; testing</h3>
+        <p>Over a decade leading test teams on finance, loans and capital-market systems.</p>
+      </div>
+      <div class="exp">
+        <h3>Engineering</h3>
+        <p>An electrical engineering foundation and hands-on programming in C.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="head">
+      <h2>Contact</h2>
+      <p class="lead">Open to conversations about lending products, QA and freelance work.</p>
+    </div>
+    <a class="contact-line" href="mailto:chandan.b.v@gmail.com">chandan.b.v@gmail.com</a>
+    <div class="actions">
+      <a class="btn primary" href="mailto:chandan.b.v@gmail.com">Send an email</a>
+      <a class="btn" href="https://www.linkedin.com/in/chandanvishwasrao-0251b4212" target="_blank" rel="noopener">View LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© <span id="yr">2026</span> Chandan Vishwasrao</span>
+  <span>Mumbai Metropolitan Region</span>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
